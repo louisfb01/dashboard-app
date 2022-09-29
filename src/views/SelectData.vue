@@ -257,7 +257,7 @@ import SummaryFormFactory from "../control/SummaryFormFactory";
 import {
   ResourceTypes,
   AttributesByResourceType
-} from "@CODA-19/coda-fhir-templates";
+} from "../../fhir-types";
 
 const nameResource = (res) => `${res.type} > ${res.attribute} (${res.datatype})`;
 const idResource = (res) => `${res.type}|${res.attribute}|${res.datatype}`;

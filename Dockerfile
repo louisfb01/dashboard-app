@@ -11,6 +11,9 @@ ARG PERSONAL_ACCESS_TOKEN=${PERSONAL_ACCESS_TOKEN}
 COPY ./ ./
 COPY ./${BUILD_ENV}.env ./.env
 
+RUN apk --no-cache add git
+RUN git submodule update --init --recursive
+
 RUN yarn cache clean
 RUN yarn install
 RUN rm -f .npmrc
