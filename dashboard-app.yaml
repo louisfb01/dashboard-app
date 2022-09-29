@@ -98,7 +98,6 @@ parameters:
   description: >-
     Custom hostname for https service route. Leave blank for default hostname,
     e.g.: <application-name>-<namespace>.<default-domain-suffix>
-  value: dashboard.hub.coda.com
 - name: VUE_APP_CODA_DASHBOARD_PORT
   displayName: PORT
   description: 'Port'
@@ -107,10 +106,8 @@ parameters:
 - name: VUE_APP_CODA_DASHBOARD_BACKEND_URL
   displayName: BACKEND ENDPOINT
   description: 'Backend Endpoint'
-  value: 'https://dashboard-backend.hub.coda.com'
   required: true
 - name: VUE_APP_CODA_DASHBOARD_KEYCLOAK_REALM
   displayName: KEYCLOAK REALM
   description: 'Keycloak Realm'
-  value: 'coda-pr'
   required: true

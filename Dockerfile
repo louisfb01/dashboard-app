@@ -8,7 +8,6 @@ RUN apk update \
 ARG BUILD_ENV=prod
 
 COPY ./ ./
-COPY ./${BUILD_ENV}.env ./.env
 
 RUN apk --no-cache add git
 RUN git submodule update --init --recursive
