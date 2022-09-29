@@ -28,7 +28,6 @@ ARG BUILD_ENV=prod
 
 WORKDIR /usr/src/app
 COPY --from=base-node-modules /usr/src/build ./
-COPY ./${BUILD_ENV}.env ./.env
 
 # Make build footprint version for easier debugging.
 RUN rm ./version.txt
