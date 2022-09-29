@@ -14,7 +14,7 @@ import {
   ResourceTypes,
   FiltersByDataType,
   AttributesByResourceType,
-} from "@CODA-19/coda-fhir-templates";
+} from "../../fhir-types";
 
 export default {
   name: "QueryBuilder",
