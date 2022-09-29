@@ -5,8 +5,6 @@ WORKDIR /usr/src/build
 RUN apk update \
     && apk add openssl
 
-ARG BUILD_ENV=prod
-
 COPY ./ ./
 
 RUN apk --no-cache add git
