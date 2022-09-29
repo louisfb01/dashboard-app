@@ -6,7 +6,6 @@ RUN apk update \
     && apk add openssl
 
 ARG BUILD_ENV=prod
-ARG PERSONAL_ACCESS_TOKEN=${PERSONAL_ACCESS_TOKEN}
 
 COPY ./ ./
 COPY ./${BUILD_ENV}.env ./.env
