@@ -2,7 +2,7 @@
   <b-navbar id="nav" toggleable="lg" variant="faded" type="light">
     <b-navbar-brand href="/">
       <img alt="Vue logo" src="../assets/logo.png" width="30" height="30" class="d-inline-block align-top">
-      CODA - 19
+      CODA
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
