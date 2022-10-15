@@ -6,22 +6,22 @@ import { isEqual } from "underscore";
 
 function data() {
     const headers = TokenBearerHeaderFactory.get();
-    return AxiosInstance.get('/api/data', {headers: headers});
+    return AxiosInstance.get('/api/data', { headers: headers });
 }
 
 function testData(post_data) {
     const headers = TokenBearerHeaderFactory.get();
-    return AxiosInstance.post('api/testData', post_data, {headers: headers});
+    return AxiosInstance.post('api/testData', post_data, { headers: headers });
 }
 
 function nsummary(sitesUri, varUri, breakdownUri) {
     const headers = TokenBearerHeaderFactory.get();
-    return AxiosInstance.get(`api/nsummary?sites=${sitesUri}&var=${varUri}&breakdown=${breakdownUri}`, {headers: headers});
+    return AxiosInstance.get(`api/nsummary?sites=${sitesUri}&var=${varUri}&breakdown=${breakdownUri}`, { headers: headers });
 }
 
 function mockStats(sitesUri, cont, disc, resources, breakdown) {
-  const headers = TokenBearerHeaderFactory.get();
-  return AxiosInstance.get(`api/mockStats?sites=${sitesUri}&cont=${cont}&disc=${disc}&resources=${resources}&breakdown=${breakdown}`, {headers: headers});
+    const headers = TokenBearerHeaderFactory.get();
+    return AxiosInstance.get(`api/mockStats?sites=${sitesUri}&cont=${cont}&disc=${disc}&resources=${resources}&breakdown=${breakdown}`, { headers: headers });
 }
 
 /**
@@ -31,7 +31,7 @@ function mockStats(sitesUri, cont, disc, resources, breakdown) {
 async function isConnected() {
     const timeoutInMs = 100;
     return Promise.race([
-        fetch(process.env.VUE_APP_CODA_DASHBOARD_BACKEND_URL),
+        fetch(process.env.CODA_DASHBOARD + APP_BACKEND_URL),
         new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), timeoutInMs))
     ]);
 }
@@ -41,15 +41,15 @@ function getPanelURI(panelId, mode = null) {
     return `/home/p${panelId}${modeQuery}`;
 }
 
-function DashData(i, mode = null){
-  const headers = TokenBearerHeaderFactory.get();
-  return AxiosInstance.get(getPanelURI(i, mode), {headers: headers});
-  //return AxiosInstance.get(`/home/p${i}?mode=lagmock`, {headers: headers});
+function DashData(i, mode = null) {
+    const headers = TokenBearerHeaderFactory.get();
+    return AxiosInstance.get(getPanelURI(i, mode), { headers: headers });
+    //return AxiosInstance.get(`/home/p${i}?mode=lagmock`, {headers: headers});
 }
 
-function Measures(){
-  const headers = TokenBearerHeaderFactory.get();
-  return AxiosInstance.get(`stats/measures`, {headers: headers});
+function Measures() {
+    const headers = TokenBearerHeaderFactory.get();
+    return AxiosInstance.get(`stats/measures`, { headers: headers });
 }
 
 function temporaryGetMockedTaskData(request, sites, force) {
@@ -63,7 +63,7 @@ function temporaryGetMockedTaskData(request, sites, force) {
             url = 'query_task_2'
         }
 
-    // else behave properly if you get the matching config.
+        // else behave properly if you get the matching config.
     } else {
         if (isEqual(request, request_task_1)) {
             url = 'query_task_1'
@@ -78,7 +78,7 @@ function temporaryGetMockedTaskData(request, sites, force) {
     }
 
     const headers = TokenBearerHeaderFactory.get();
-    return AxiosInstance.get(`stats/${url}`, {headers: headers});
+    return AxiosInstance.get(`stats/${url}`, { headers: headers });
 }
 
 function customRequest(request, sites) {
@@ -88,7 +88,7 @@ function customRequest(request, sites) {
         const url = `stats/query?sites=${sites.map(s => s.trim()).join(',')}&payload=${payload}`;
 
         const headers = TokenBearerHeaderFactory.get();
-        return AxiosInstance.get(url, {headers: headers});
+        return AxiosInstance.get(url, { headers: headers });
     } catch (e) {
         console.warn(e);
         console.warn(e.stack);
@@ -122,8 +122,8 @@ const request_task_1 = {
     ],
     "options": {
         "measures": {
-            "continuous": [ "count", "mean", "stdev", "ci95" ],
-            "categorical": [ "count", "mode" ]
+            "continuous": ["count", "mean", "stdev", "ci95"],
+            "categorical": ["count", "mode"]
         }
     }
 };
@@ -145,7 +145,7 @@ const request_task_2 = {
     "options": {
         "measures": {
             "continuous": [],
-            "categorical": [ "count" ]
+            "categorical": ["count"]
         }
     }
 };

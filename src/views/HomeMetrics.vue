@@ -10,7 +10,7 @@
       <v-col cols="4">Total Time : {{ totalTimeInMs }} ms</v-col>
     </v-row>
     <ul id="measured-queries">
-      <TestQuery v-for="query in panelQueries" :key="query.id" :query="query" :launch="launch" v-on:queryComplete="onQueryCompleted"></TestQuery>
+      <TestQuery v-for="query in panelQueries" :key="query.id" :query="Vue.dashboardApiUrl+query" :launch="launch" v-on:queryComplete="onQueryCompleted"></TestQuery>
     </ul>
   </v-container>
 </template>

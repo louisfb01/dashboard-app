@@ -18,6 +18,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import version from "./utils/version";
 import moment from 'moment';
 
+Vue.mixin({
+  data: function () {
+    return {
+      dashboardApiUrl: process.env.CODA_DASHBOARD_API_URL
+    }
+  }
+})
+
 Vue.prototype.moment = moment
 Vue.prototype.$http = Axios;
 

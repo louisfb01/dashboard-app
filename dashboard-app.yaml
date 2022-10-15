@@ -71,12 +71,12 @@ objects:
       spec:
         containers:
           - env:
-            - name: VUE_APP_CODA_DASHBOARD_PORT
-              value: '${VUE_APP_CODA_DASHBOARD_PORT}'
-            - name: VUE_APP_CODA_DASHBOARD_BACKEND_URL
-              value: '${VUE_APP_CODA_DASHBOARD_BACKEND_URL}'
-            - name: VUE_APP_CODA_DASHBOARD_KEYCLOAK_REALM
-              value: '${VUE_APP_CODA_DASHBOARD_KEYCLOAK_REALM}'
+            - name: CODA_DASHBOARD_APP_PORT
+              value: '${CODA_DASHBOARD_APP_PORT}'
+            - name: CODA_DASHBOARD_API_URL
+              value: '${CODA_DASHBOARD_API_URL}'
+            - name: CODA_DASHBOARD_APP_AUTH_REALM
+              value: '${CODA_DASHBOARD_APP_AUTH_REALM}'
             name: ${CODA_HUB_DASHBOARD}
             image: coda/coda-hub-dashboard:latest
             ports:
@@ -98,16 +98,16 @@ parameters:
   description: >-
     Custom hostname for https service route. Leave blank for default hostname,
     e.g.: <application-name>-<namespace>.<default-domain-suffix>
-- name: VUE_APP_CODA_DASHBOARD_PORT
+- name: CODA_DASHBOARD_APP_PORT
   displayName: PORT
   description: 'Port'
   value: '8080'
   required: true
-- name: VUE_APP_CODA_DASHBOARD_BACKEND_URL
+- name: CODA_DASHBOARD_API_URL
   displayName: BACKEND ENDPOINT
   description: 'Backend Endpoint'
   required: true
-- name: VUE_APP_CODA_DASHBOARD_KEYCLOAK_REALM
+- name: CODA_DASHBOARD_APP_AUTH_REALM
   displayName: KEYCLOAK REALM
   description: 'Keycloak Realm'
   required: true

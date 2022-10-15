@@ -3,7 +3,7 @@ module.exports = {
     "vuetify"
   ],
   devServer: {
-    port: process.env.VUE_APP_CODA_DASHBOARD_PORT,
+    port: process.env.CODA_DASHBOARD_APP_PORT,
     https: true,
     disableHostCheck: true
   }

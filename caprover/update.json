@@ -1,0 +1,21 @@
+{
+    "appName": "dashboard-app",
+    "instanceCount": 1,
+    "notExposeAsWebApp": false,
+    "containerHttpPort": "$CODA_DASHBOARD_APP_PORT",
+    "forceSsl": true,
+    "envVars": [
+        {
+            "key": "CODA_DASHBOARD_APP_AUTH_REALM",
+            "value": "$CODA_DASHBOARD_APP_AUTH_REALM"
+        },
+        {
+            "key": "CODA_AUTH_SERVICE_URL",
+            "value": "$CODA_AUTH_SERVICE_URL"
+        },
+        {
+            "key": "CODA_DASHBOARD_API_URL",
+            "value": "$CODA_DASHBOARD_API_URL"
+        }
+    ]
+}
