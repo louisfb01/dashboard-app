@@ -209,9 +209,9 @@ export default {
   data() {
     return {
       numberTiles: {
-        1: {rate: NaN, total: NaN},
-        2: {total: NaN, average: NaN, rt: NaN},
-        3: {total: NaN, average: NaN, rt: NaN}
+        1: {rate: 0, total: 0},
+        2: {total: 0, average: 0, rt: 0},
+        3: {total: 0, average: 0, rt: 0}
       },
       lines: {
         4: {},
