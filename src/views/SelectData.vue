@@ -96,7 +96,7 @@
 
                       <div class="subPanel">
                         <span>{{$t("filters")}}</span>
-                        <QueryBuilder :id="resource.label+'-queryBuilder'"  :key="componentKey" :query="Vue.dashboardApiUrl+form.qB.query" :resource="resource.name"></QueryBuilder>
+                        <QueryBuilder :id="resource.label+'-queryBuilder'"  :key="componentKey" :query="form.qB.query" :resource="resource.name"></QueryBuilder>
                       </div>
                       <div class="subPanel">
                         <span>{{$t("fields")}}</span>
