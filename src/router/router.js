@@ -94,15 +94,12 @@ const routes = [
         meta: {
             title: "CODA 19 - Connections"
         }
-    },
-    { path: '*', redirect: '/' }, // catch all use case
+    }
 ]
 
 
 const router = new VueRouter({
     routes,
-    mode: 'history',
-    hash: false,
     linkExactActiveClass: "active",
 })
 
