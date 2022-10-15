@@ -45,7 +45,7 @@ export default {
       const headers = TokenBearerHeaderFactory.get();
       this.startTime = performance.now();
       axios.create({
-        baseURL: process.env.CODA_DASHBOARD_API_URL,
+        baseURL: process.env.VUE_APP_CODA_DASHBOARD_API_URL,
         timeout: 30000,
       }).get(this.query.endpoint, { headers: headers })
        .then(res => this.onSuccess(res))

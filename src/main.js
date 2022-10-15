@@ -21,7 +21,7 @@ import moment from 'moment';
 Vue.mixin({
   data: function () {
     return {
-      dashboardApiUrl: process.env.CODA_DASHBOARD_API_URL
+      dashboardApiUrl: process.env.VUE_APP_CODA_DASHBOARD_API_URL
     }
   }
 })

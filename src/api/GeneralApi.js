@@ -31,7 +31,7 @@ function mockStats(sitesUri, cont, disc, resources, breakdown) {
 async function isConnected() {
     const timeoutInMs = 100;
     return Promise.race([
-        fetch(process.env.CODA_DASHBOARD + APP_BACKEND_URL),
+        fetch(process.env.VUE_APP_CODA_DASHBOARD_API_URL),
         new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), timeoutInMs))
     ]);
 }
