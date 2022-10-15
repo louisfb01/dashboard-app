@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve --watch --mode development",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "caprover:setup": "node ./caprover/setup.js",
+    "caprover:deploy": "node ./caprover/deploy.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
