@@ -291,13 +291,13 @@ export default {
                 {
                   "path": "code.coding.code",
                   "operator": "is",
-                  "value": "718-7"
+                  "value": "20570-8"
                 }
               ],
               "fields": [
                 {
                   "path":"value.Quantity.value",
-                  "label": "hemoglobin"
+                  "label": "hematocrit"
                 }
               ]
             },
@@ -317,7 +317,7 @@ export default {
           "inputs": [
             "gender",
             "age",
-            "hemoglobin"
+            "hematocrit"
           ],
           "outputs": [
             "isDeceased"
