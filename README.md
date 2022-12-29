@@ -7,36 +7,25 @@
 - **Contributors:** Louis Mullie [[@louism](https://github.com/louismullie)].
 - **License:** The code in this repository is released under the GNU General Public License, V3.
 
-### Deployment in production
-
-- cd ./front-end
-- docker login -u ${USER} -p ${USER}
-- ./publish.sh ${PERSONAL_ACCESS_TOKEN}
-- Ask a VALERIA team member to update the image in openshift.
-
 ### Project setup
 
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and serve for development (with hot reload)
 
 ```
 npm run serve
 ```
 
-Launch on `https://localhost:8000` by default.
+Launches on `https://localhost:8000` by default.
 
-### Compiles and minifies for production
+### Compile and minify for production
 
 ```
 npm run build
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Security analysis
 
