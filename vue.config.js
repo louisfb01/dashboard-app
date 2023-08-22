@@ -7,7 +7,7 @@ module.exports = {
   devServer: {
     port: process.env.CODA_DASHBOARD_APP_PORT,
     https: true,
-    disableHostCheck: true
+    allowedHosts: "all"
   },
   configureWebpack: {
     plugins: [

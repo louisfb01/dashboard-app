@@ -268,40 +268,45 @@ export default {
           {
             "resource": "Patient",
             "label": "PA",
+            "limit": 1000,
             "filters": [
             ],
             "fields": [
               {
                 "path":"gender",
-                "label": "gender"
+                "label": "gender",
+                "type": "string"
               },
               {
                 "path":"age",
-                "label":"age"
+                "label":"age",
+                "type": "integer"
               },
               {
                 "path":"isDeceased",
-                "label":"isDeceased"
+                "label":"isDeceased",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "resource": "Observation",
+            "label": "OB",
+            "filters": [
+              {
+                "path": "code.coding.code",
+                "operator": "is",
+                "value": "20570-8",
+                "type": "string"
               }
             ],
-            "joins": {
-              "resource": "Observation",
-              "label": "OB",
-              "filters": [
-                {
-                  "path": "code.coding.code",
-                  "operator": "is",
-                  "value": "20570-8"
-                }
-              ],
-              "fields": [
-                {
-                  "path":"value.Quantity.value",
-                  "label": "hematocrit"
-                }
-              ]
-            },
-            "limit":10000
+            "fields": [
+              {
+                "path":"value.Quantity.value",
+                "label": "hematocrit",
+                "type": "integer"
+              }
+            ]
           }
         ],
         "options": {

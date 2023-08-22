@@ -70,7 +70,7 @@ export default {
       this.$i18n.locale = this.$i18n.locale === 'en' ? 'fr' : 'en';
     },
     goToApiDocs() {
-      return 'https://github.com/coda-platform/api-specification';
+      return 'https://coda-api-doc.netlify.app/';
     }
   }
 }
