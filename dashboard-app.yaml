@@ -82,7 +82,7 @@ objects:
             - name: CODA_DASHBOARD_APP_AUTH_CLIENT_ID
               value: '${CODA_DASHBOARD_APP_AUTH_CLIENT_ID}'
             name: ${CODA_HUB_DASHBOARD}
-            image: coda/coda-hub-dashboard:latest
+            image: coda19/coda-hub-dashboard:latest
             ports:
               - name: ${CODA_HUB_DASHBOARD}
                 containerPort: 8080
