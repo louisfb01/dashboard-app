@@ -3,7 +3,7 @@
     "instanceCount": 1,
     "notExposeAsWebApp": false,
     "containerHttpPort": "$CODA_DASHBOARD_APP_PORT",
-    "forceSsl": true,
+    "forceSsl": false,
     "envVars": [
         {
             "key": "CODA_DASHBOARD_APP_AUTH_REALM",
